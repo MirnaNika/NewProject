@@ -25,8 +25,8 @@ public function checkAnswer($selectedOptions) {
     return $selectedOptions === $this->correctAnswer;
 }
 }
-} 
-}
+
+
 
 
 
