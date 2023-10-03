@@ -23,7 +23,7 @@ class Question {
         sort($selectedOptions);
         sort($this->correctAnswer);
 
-        return $selectedOptions === $this->correctAnswer;
+        return $selectedOptions == $this->correctAnswer;
     }
 }
 ?>
