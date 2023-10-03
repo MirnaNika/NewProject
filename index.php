@@ -29,17 +29,50 @@ class Question {
 ?>
 
 <?php
+//$q1 = new Question("Which of these terms are 'access modifiers' in PHP?",
+//  ["protected", "private", "public", "abstract"],
+//   [0, 1, 2]);
+
+//$q1->displayQuestion();
+//$selectedOptions = [0, 1, 2];
+
+//if ($q1->checkAnswer($selectedOptions)) {
+//   echo "Right answer!\n";
+//} else {
+//   echo "Wrong answer. Right answers are: 0, 1, 2\n";
+//}
+
+
 $q1 = new Question("Which of these terms are 'access modifiers' in PHP?",
     ["protected", "private", "public", "abstract"],
     [0, 1, 2]);
 
 $q1->displayQuestion();
-$selectedOptions = [0, 1, 2];
+
+echo "Enter your answer(s) separated by commas: ";
+$selectedOptions = explode(',', readline());
 
 if ($q1->checkAnswer($selectedOptions)) {
     echo "Right answer!\n";
 } else {
     echo "Wrong answer. Right answers are: 0, 1, 2\n";
 }
-?>
 
+$q2 = new Question("What file extension does PHP have?",
+    [".php", ".py", ".jsp", ".xml"],
+    [0]);
+
+$q2->displayQuestion();
+
+echo "Enter your answer(s) separated by commas: ";
+$selectedOptions = explode(',', readline());
+
+if ($q2->checkAnswer($selectedOptions)) {
+    echo "Right answer!\n";
+} else {
+    echo "Wrong answer. Right answer is: 0\n";
+}
+
+
+
+?>
